@@ -1,65 +1,39 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout, {SiteName} from '../components/Layout'
+import Footer from '../components/Footer'
+import { posts } from '../getAllPosts'
+import Blog from '../components/_BlogContainer'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+function Home() {
+    return (
+        <Layout>
+            <Head>
+                <title>Welcome to {SiteName}</title>
+            </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            {/* welcome container */}
+            <div className="text-white py-12 text-center">
+                <h1 className="text-2xl uppercase font-black tracking-wide">{SiteName}</h1>
+                <p className="text-lg italicfont-light tracking-wide">My simple blog diary...</p>
+            </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+            {/* sample posts container */}
+            <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
+                {posts.map((post) => (
+                    <Blog key={post.link} post={post} />
+                ))}
+                {/* <div className="bg-magnolia py-4 px-6 rounded-md my-1">
+                    <h1 className="text-3xl font-black tracking-wider text-venetian-red">Hello World</h1>
+                    <small className="opacity-75 font-light italic">Posted on: <span className="font-bold">August 18, 2020</span></small>
+                    <p className="mt-1 font-light tracking-wide text-sonic-silver truncate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore deserunt sit a, deleniti fuga esse quos numquam accusantium commodi eveniet.</p>
+                    <button className="bg-rich-black rounded-md opacity-75 hover:opacity-100 transition-colors duration-500 font-light text-white tracking-wide mt-2 py-1 px-4 text-sm">Read More</button>
+                </div> */}
+            </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+            {/* footer container */}
+            <Footer />
+        </Layout>
+    )
 }
+
+export default Home
