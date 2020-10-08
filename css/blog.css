@@ -3,5 +3,5 @@
 }
 
 .blog h2{
-    @apply text-2xl font-extrabold;
+    @apply text-2xl font-extrabold pt-2;
 }
