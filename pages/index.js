@@ -19,7 +19,7 @@ function Home() {
 
             {/* sample posts container */}
             <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
-                {posts.map((post) => (
+                {posts.sort((a,b) => new Date(b.module.meta.date) - new Date(a.module.meta.date)).map((post) => (
                     <Blog key={post.link} post={post} />
                 ))}
                 {/* <div className="bg-magnolia py-4 px-6 rounded-md my-1">
