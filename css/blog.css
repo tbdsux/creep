@@ -1,7 +1,0 @@
-.blog p{
-    @apply font-light text-lg py-2;
-}
-
-.blog h2{
-    @apply text-2xl font-extrabold pt-2;
-}

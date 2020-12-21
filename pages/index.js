@@ -22,7 +22,7 @@ function Home() {
       </div>
 
       {/* sample posts container */}
-      <div className="w-5/6 md:w-2/3 lg:w-3/4 xl:w-2/3 lg:grid grid-cols-2 gap-2 mx-auto">
+      <div className="w-5/6 md:w-2/3 lg:w-3/4 xl:w-2/3 lg:grid grid-cols-2 gap-4 mx-auto">
         {posts
           .sort(
             (a, b) =>

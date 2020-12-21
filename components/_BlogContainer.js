@@ -8,7 +8,7 @@ export default function Blog({ post }) {
 
   return (
     <div className="bg-magnolia py-4 px-6 rounded-md my-2 lg:my-0">
-      <h1 className="text-3xl font-black tracking-wider text-venetian-red">
+      <h1 className="text-3xl font-black tracking-wider text-venetian-red truncate">
         {meta.title}
       </h1>
       <small className="opacity-75 font-light italic">

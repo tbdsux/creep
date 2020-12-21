@@ -1,5 +1,5 @@
 {
-  "name": "creep",
+  "name": "creep-migrate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,16 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^3.0.0",
-    "@mdx-js/loader": "^1.6.19",
-    "@next/mdx": "^9.5.5",
-    "autoprefixer": "^9.8.6",
-    "next": "^9.5.5",
-    "postcss-cli": "^8.1.0",
-    "postcss-import": "^12.0.1",
-    "purgecss": "^3.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "tailwindcss": "^1.9.5"
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.3",
+    "autoprefixer": "^10.1.0",
+    "next": "10.0.3",
+    "postcss": "^8.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.2"
   }
 }
